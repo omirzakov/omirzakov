@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost&family=Lobster&display=swap");
+.header-text, .navbar-fixed {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skills, .about {
+  margin-top: 100px;
+  font-family: "Jost", sans-serif;
+}
+
+.skills .title, .about .title {
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  position: relative;
+}
+
+.skills .title::after, .about .title::after {
+  content: "";
+  margin-left: 10px;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 30px;
+  height: 30px;
+}
+
+.navbar-fixed {
+  flex-direction: column;
+  position: fixed;
+  padding: 10px;
+  box-shadow: 1px 0px 10px 0px rgba(227, 227, 227, 0.75);
+  background: #f7f7f7;
+  top: 150px;
+  right: 100px;
+}
+.navbar-fixed .title {
+  transition: 0.3s;
+  cursor: pointer;
+}
+.navbar-fixed .title img {
+  width: 40px;
+}
+.navbar-fixed .open {
+  transform: rotate(45deg);
+}
+
+.navbar-links {
+  opacity: 0;
+  height: 0;
+  transition: 0.3s;
+}
+.navbar-links div {
+  margin: 10px 0;
+}
+
+.active {
+  opacity: 1;
+  transition: 0.3s;
+  height: 100%;
+}
+
+.main-wrapper {
+  max-width: 950px;
+  height: 100%;
+  margin: 30px auto;
+  padding: 30px;
+}
+
+.header {
+  margin-top: 50px;
+  background: #f7f7f7;
+}
+.header-text {
+  padding: 10px;
+  font-family: "Lobster", cursive;
+  font-size: 30px;
+  letter-spacing: 2px;
+}
+.header-text span {
+  padding: 0 10px;
+  color: #525ee6;
+}
+.header-text img {
+  padding-left: 10px;
+  width: 40px;
+}
+
+.about .title::after {
+  background: url("../img/icons/monocle.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.about .info {
+  margin-top: 30px;
+  font-size: 23px;
+}
+.about .info .info-item p {
+  position: relative;
+  margin: 10px 0;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.about .info .info-item p:hover {
+  background: #f7f7f7;
+  box-shadow: 1px 0px 5px 0px rgba(227, 227, 227, 0.75);
+}
+.about .info .info-item p::before {
+  content: "x";
+  padding-right: 10px;
+  display: inline-block;
+  transform: rotate(10deg);
+  color: #f72222;
+}
+.about .info .info-item .main-info::after {
+  content: "+";
+  transition: 0.3s;
+  color: #0aa50a;
+  position: absolute;
+  right: 0;
+}
+.about .info .info-item .open::after {
+  transform: rotate(45deg);
+  color: #f72222;
+}
+.about .info .sub-info {
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+}
+.about .info .sub-info .iitu-logo img {
+  width: 250px;
+}
+.about .info .university-info {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  text-align: justify;
+  line-height: 30px;
+}
+.about .info .active {
+  opacity: 1;
+  visibility: visible;
+  padding-left: 30px;
+  height: 100%;
+  transition: 0.2s;
+  margin-bottom: 30px;
+}
+
+.skills .title::after {
+  background: url("../img/icons/laptop.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.skills-container {
+  margin-top: 30px;
+}
+.skills .item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+  font-size: 23px;
+}
+.skills .item img {
+  width: 65px;
+}
+.skills .other {
+  background: #f0af0c;
+  width: max-content;
+  cursor: pointer;
+  padding: 10px 20px;
+  float: right;
+  font-size: 20px;
+  border-radius: 8px;
+}
+
+/*# sourceMappingURL=style.css.map */

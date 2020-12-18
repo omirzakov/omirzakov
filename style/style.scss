@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost&family=Lobster&display=swap');
+
+
+// Шаблоны
+%center-elem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+%section-default {
+  margin-top: 100px;
+  font-family: 'Jost', sans-serif;
+}
+
+%title-block {
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  position: relative;
+}
+
+%title-after {
+  content: "";
+  margin-left: 10px;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 30px;
+  height: 30px;
+}
+
+$default-width: 950px;
+$default-bg: #f7f7f7;
+
+.navbar-fixed {
+  @extend %center-elem;
+  flex-direction: column;
+  position: fixed;
+  padding: 10px;
+  box-shadow: 1px 0px 10px 0px rgba(227, 227, 227, 0.75);
+  background: $default-bg;
+  top: 150px;
+  right: 100px;
+
+  .title {
+    transition: .3s;
+    cursor: pointer;
+
+    img {
+      width: 40px;
+    }
+  }
+
+  .open {
+    transform: rotate(45deg);
+  }
+}
+
+.navbar-links {
+  opacity: 0;
+  height: 0;
+  transition: .3s;
+
+  div {
+    margin: 10px 0;
+  }
+
+}
+
+.active {
+  opacity: 1;
+  transition: .3s;
+  height: 100%;
+}
+
+.main-wrapper {
+  max-width: $default-width;
+  height: 100%;
+  margin: 30px auto;
+  padding: 30px;
+}
+
+// Header
+.header {
+  margin-top: 50px;
+  background: $default-bg;
+
+  &-text {
+    @extend %center-elem;
+    padding: 10px;
+    font-family: 'Lobster', cursive;
+    font-size: 30px;
+    letter-spacing: 2px;
+
+    span {
+      padding: 0 10px;
+      color: #525ee6;
+    }
+
+    img {
+      padding-left: 10px;
+      width: 40px;
+    }
+  }
+}
+
+
+// User info
+.about {
+  @extend %section-default;
+
+  .title {
+    @extend %title-block;
+
+    &::after {
+      background: url("../img/icons/monocle.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      @extend %title-after;
+    }
+  }
+
+  .info {
+    margin-top: 30px;
+    font-size: 23px;
+
+    .info-item {
+
+      p {
+        position: relative;
+        margin: 10px 0;
+        padding: 5px 10px;
+        cursor: pointer;
+        transition: .3s;
+
+        &:hover {
+          background: $default-bg;
+          box-shadow: 1px 0px 5px 0px rgba(227, 227, 227, 0.75);
+        }
+
+        &::before {
+          content: "x";
+          padding-right: 10px;
+          display: inline-block;
+          transform: rotate(10deg);
+          color: #f72222;
+        }
+      }
+
+      .main-info {
+        &::after {
+          content: "+";
+          transition: .3s;
+          color: #0aa50a;
+          position: absolute;
+          right: 0;
+        }
+      }
+
+
+      .open {
+        &::after {
+          transform: rotate(45deg);
+          color: #f72222;
+        }
+      }
+
+    }
+
+    // Аккардеон
+    .sub-info {
+      opacity: 0;
+      visibility: hidden;
+      height: 0;
+
+      .iitu-logo {
+        img {
+          width: 250px;
+        }
+      }
+    }
+
+    .university-info {
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+      text-align: justify;
+      line-height: 30px;
+    }
+
+    .active {
+      opacity: 1;
+      visibility: visible;
+      padding-left: 30px;
+      height: 100%;
+      transition: .2s;
+      margin-bottom: 30px;
+    }
+  }
+
+}
+
+
+// Skills
+
+.skills {
+  @extend %section-default;
+
+  .title {
+    @extend %title-block;
+
+    &::after {
+      background: url("../img/icons/laptop.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      @extend %title-after;
+    }
+  }
+
+  &-container {
+    margin-top: 30px;
+  }
+
+  .item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+    font-size: 23px;
+
+    img {
+      width: 65px;
+    }
+  }
+
+  .other {
+    background: #f0af0c;
+    width: max-content;
+    cursor: pointer;
+    padding: 10px 20px;
+    float: right;
+    font-size: 20px;
+    border-radius: 8px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
