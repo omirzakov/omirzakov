@@ -7,15 +7,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style/reset.css">
     <link rel="stylesheet" href="style/style.css">
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
 
     <title>Madiyar Omirzakov</title>
 </head>
 <body>
+    <!--  Главный контент  -->
     <div class="main-wrapper">
         <header class="header">
             <div class="header-text">
                 Привет, меня зовут Мадияр и я
-                     <span>Frontend</span> разработчик
+                     <span class="animate__animated animate__tada">Frontend</span> разработчик
                     <img src="img/icons/sunglasses.png" alt="Sunglasses">
             </div>
         </header>
@@ -107,18 +112,23 @@
                 </div>
             </div>
 
-            <div class="other">
+            <div class="other" id="modal-btn">
                 Прочее
             </div>
+
         </div>
 
     </div>
 
+    </div>
 
+
+    <!--  Навбар правый  -->
     <div class="navbar-fixed">
         <div class="title">
             <img src="img/add.svg" alt="Add">
         </div>
+
 
         <div class="navbar-links">
             <div>
@@ -142,6 +152,84 @@
                 </a>
             </div>
 
+        </div>
+    </div>
+
+    <!--  Модальное окно  -->
+    <div class="modal-wrapper">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div id="modal-close">
+                    Закрыть
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="block">
+                    <div class="skills-other-header">
+                        Backend:
+                    </div>
+                    <div class="skills-other-item">
+                        Spring
+                    </div>
+                    <div class="skills-other-item">
+                        PHP (Laravel базово)
+                    </div>
+                    <div class="skills-other-item">
+                        .NET MVC
+                    </div>
+                </div>
+
+                <div class="block">
+                    <div class="skills-other-header">
+                        База данных:
+                    </div>
+                    <div class="skills-other-item">
+                        MySQL
+                    </div>
+                    <div class="skills-other-item">
+                        POSTGRE
+                    </div>
+                </div>
+
+                <div class="block">
+                    <div class="skills-other-header">
+                        Паттерны:
+                    </div>
+                    <div class="skills-other-item">
+                        MVC
+                    </div>
+                    <div class="skills-other-item">
+                        Builder
+                    </div>
+                    <div class="skills-other-item">
+                        Facade
+                    </div>
+                    <div class="skills-other-item">
+                        Singleton
+                    </div>
+                </div>
+
+                <div class="block">
+                    <div class="skills-other-header">
+                        Прочее:
+                    </div>
+                    <div class="skills-other-item">
+                        Понимание работы HTTP
+                    </div>
+                    <div class="skills-other-item">
+                        SSR
+                    </div>
+                    <div class="skills-other-item">
+                        Асинхронное программирование
+                    </div>
+                    <div class="skills-other-item">
+                        Микросервисы
+                    </div>
+                    <div class="skills-other-item">
+                        Работа с API
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 

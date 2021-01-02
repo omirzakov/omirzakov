@@ -171,10 +171,64 @@
   background: #f0af0c;
   width: max-content;
   cursor: pointer;
-  padding: 10px 20px;
+  padding: 5px 20px;
   float: right;
   font-size: 20px;
   border-radius: 8px;
+}
+
+.modal-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  background: rgba(32, 32, 32, 0.9);
+  width: 100%;
+  min-height: 100vh;
+  top: 0;
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  z-index: 0;
+  transition: 0.3s;
+  font-family: "Jost", sans-serif;
+}
+.modal-content {
+  flex: 0 1 560px;
+  padding: 20px;
+  border-radius: 7px;
+  box-sizing: border-box;
+  height: 750px;
+  background: #f7f7f7;
+}
+.modal-header {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  transition: 0.1s;
+}
+.modal-header:hover {
+  color: rgba(255, 77, 97, 0.94);
+}
+.modal-active {
+  opacity: 1;
+  width: 100%;
+  min-height: 100vh;
+  visibility: visible;
+}
+.modal-body .block {
+  margin-top: 20px;
+}
+.modal-body .skills-other-header {
+  font-weight: bold;
+  font-size: 18px;
+}
+.modal-body .skills-other-item {
+  margin: 5px 0;
+}
+
+#modal-close {
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */
